@@ -8,6 +8,17 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const LoginScreen = ({ navigation }) => {
 
+    useEffect(()=>{
+        AsyncStorage.getItem("role").then((role)=>{
+            if(role == "admin"){
+                navigation.navigate("/Admin/Home")
+            }else if(role == "user"){
+                navigation.navigate("/User/Home")
+            }else{
+                
+            }
+        })
+    },[]);
 
     const [loginProps, setLoginProps] = useRecoilState(loginState);
     const [loading, setLoading] = useState(false);

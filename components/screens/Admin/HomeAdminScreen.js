@@ -1,8 +1,9 @@
 import { View, Text, Image } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import image from "../../../assets/images/admin.png" 
 
 const HomeAdminScreen = () => {
+
   return (
     <View className="w-full min-h-screen bg-white">
         <Image

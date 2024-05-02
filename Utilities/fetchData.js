@@ -22,7 +22,7 @@ export async function fetchData({
         configuration.body = JSON.stringify(body);
 
     }
-
+    
     const api_url = "http://192.168.1.3:8000/api";
     const response = await fetch(api_url + url, configuration);
     const result = await response.json();
